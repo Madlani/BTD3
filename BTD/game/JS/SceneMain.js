@@ -134,6 +134,7 @@ class SceneMain extends Phaser.Scene {
             if (!player.getData("isDead") &&
                 !enemy.getData("isDead")) {
               player.pop(false);
+              player.onDestroy();
               enemy.pop(true);
             }
           });

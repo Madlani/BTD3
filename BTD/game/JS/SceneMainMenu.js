@@ -39,6 +39,15 @@ class SceneMainMenu extends Phaser.Scene {
         this.btnPlay.setTexture("sprBtnPlay");
         this.scene.start("SceneMain");
       }, this);
-      // this.scene.start("SceneMain");
+
+      this.title = this.add.text(this.game.config.width * 0.5, 128, "Bloons TD Reimagined", {
+        fontFamily: 'monospace',
+        fontSize: 30,
+        fontStyle: 'bold',
+        color: '#ffffff',
+        align: 'center'
+      });
+      this.title.setOrigin(0.5);
+
     }
   }
