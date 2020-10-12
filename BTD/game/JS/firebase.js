@@ -24,5 +24,6 @@ function updateHighScore(score) {
 
 function returnHighScore(){
     console.log("entering returnHighScore")
+    console.log(myDatabase.ref('/highScore'));
     return myDatabase.ref("highScore");
 }
