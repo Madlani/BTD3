@@ -29,7 +29,7 @@ class SceneMain extends Phaser.Scene {
     create() {
 
         var gameScore = 0;
-        var highScore = 5;
+        var highScore = 50;
         document.getElementById("highScore").innerHTML = "High Score: " + highScore;
 
         this.anims.create({
@@ -122,6 +122,7 @@ class SceneMain extends Phaser.Scene {
                 document.getElementById("gameScore").innerHTML = "Current Score: " + gameScore;
                 if (gameScore > highScore){
                     highScore = gameScore;
+                    updateHighScore(highScore);
                 }
                 document.getElementById("highScore").innerHTML = "High Score: " + highScore;
 
